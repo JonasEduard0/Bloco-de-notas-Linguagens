@@ -1,0 +1,273 @@
+                                                Python
+                      Símbolos
+string      | palavras
+int           | inteiro
+float        | quebrado
+bool        | true , false
+and         | todos têm q ser true
+or           | um tem que ser true
+!=           | diferente
+==          | idêntico
+<            | menor
+>            | maior
+=            | recebe
+<=          | menor ou igual
+>=          | maior ou igual
+%           | pega o resto de uma divisão
+#            | comentário no código
+**          | potência
++=          | a = a + b  \  a+= b
+in	    | se o numero ou letra a direita estiver contido na direita entao é true
+
+Todo método tem parênteses e pode ter . no início. Ex: .metodo()
+
+                                      Variáveis
+
+type(variavel)                                            | O tipo(type) da variavel(variavel), se é int, string, etc
+
+variavel = int(input("Digite o número:")) | Pede para digitar(input) um inteiro(int) e guarda na variável(variavel)
+                                                                  |Pode ser feito com : int,float,bool,string
+                               
+
+                                       Prints
+print("""Eu              |
+estou                       |
+programando""")    | Printa respeitando a quebra de linha
+
+print("\n")              | Salta linha
+
+print("numero =",numero) | Printa a frase "numero =" e dps separado por vírgula o valor da variável numero
+
+
+                                Comandos importantes
+.format
+
+n1 = int(input('Digite um valor:'))                     
+n2 = int(input('Digite outro:'))                        
+s = n1 + n2                                             
+print('A soma entre {} e {} vale {}'.format(n1, n2, s)) | No 1 {} será mostrado a var n1 e assim por diante
+print(f'A soma entre {n1} e {n2} vale {s}') 
+
+format(f) pode ser usado para tratar strings, cálculo, etc
+
+n = input('Digite um valor:')
+print(n.isnumeric())               | Se for um tipo de número, dará true.Existem muito is: lower, upper, alpha, alnum,etc
+
+{:.2f}                                   | Mostra apenas o número de casas decimais escolhido
+
+end=''                                  | Coloca tudo na mesma linha
+
+del(variavel)			    | Deleta a variavel
+
+
+                     If statement / Estrutura condicional simples , composta e aninhada
+
+if nome  ==  Jonas  :	               | Estrutura condicional simples
+      print("Meu nome")              | Se a variável "nome" receber o valor 'Jonas' , print será realizado
+				
+elif nome == Lucas :                  | Estrutura condicional aninhada . Pode ter qunatos elif quiser . Economiza outros if
+      print('Nome do professor')  | Ou se a variável "nome" receber o valor 'Lucas' , esse print será realizado
+
+else :                                          | Estrutura condicional composta .
+     print('Nome normal')           | Senão , esse print será executado
+
+
+				   Módulos
+
+import math                                 | Importa todas as funções da biblioteca math
+from math import sqrt, factorial | Importa apenas as funções sqrt e factorial da biblioteca math
+
+num = int(input('Numero 1:'))      | Pega o valor digitado na variável num e faz a raiz quadrada(sqrt) dele da biblioteca
+raiz = math.sqrt(num)                  |math
+
+Existe bibliotecas para tudo que podem ser exportadas para o Python
+
+
+                       Bibiotecas/pacoters importantes
+
+math          | .ceil , floor , trunc , pow , sqrt , factorial
+ramdom    | .randint : Escolhe um numero aleatório inteiro(randint) entre os escolhidos(1,10)
+pygame     | Feito para jogos, possui um mixer de áudio
+datetime   | Relacionado a datas
+time          | sleep(1) : dá uma pausa no código pelos segundos q quiser
+         
+
+                            Tratamento de strings
+
+variavel='Curso em vídeo Python'        | Printa do nono caractere(9) até o 12(13), não o 13, de 2 em 2(2) caracteres
+print(frase[9:13:2])                               |Resultado : vd
+
+print(variavel[15:])                               | Print do caractere 15(15) até o final
+
+len(variavel)                                         | Imprime o tamanho da variavel frase
+
+variavel.count('o',0,13)                        | Conta quantos "o" tem na variável frase do caractere 0 á 12
+
+variavel.find('deo')                               | Indica a posiçao do caractere "deo" na frase. -1 se não existe
+
+'Curso' in variavel                                | True se tiver "Curso" na variavel frase ,false caso contrario
+
+variavel.replace('Python', 'Androide') | Substitui as strings 'Python' para 'Androide'
+
+variavel.upper() / lower                     | Põe todos caracteres em maiúsculo ou minúsculo
+
+variavel.capitalize()                           | Todos caracteres em minúsculo mas apenas o primeiro em maiúsculo
+
+variavel.title()                                   | Os primeiros caracteres de cada palavra fica maiusculo
+
+variavel.strip()                                  | Apaga espaços desnecessários q o usuário colocou
+
+variavel.split()                                  | Divide as palavras e guarda em um numero, "Curso" é 0, "em" é 1, etc
+
+variavel.count(X)		                 | Quantas vezes o numero X aparece
+
+variavel.sort			                | Organiza em decrescente os valores da variavel composta
+
+
+				  Cores no terminal
+
+\033[1;1;1m | No lugar de 1 pode colocar o número q quiser referente a cor desejada.
+          |  |  | Cor do background
+          |  | Cor do texto
+          |  estilo
+                                                      Em style
+    Existe outros alem desses mas esses são mais usados
+0 = Nada
+1 = Negrito
+4 = Sublinhado
+7 = Inverte o texte com o background
+
+			                Em text
+30 á 37 = Respectivamente : branco,vermelho,verde,amarelo,azul,roxo,ciano,cinza
+
+		                      Em background
+Ordem das cores idênticas ao text mas de 40 á 47
+
+print('\033[1;1;1mOlá mundo!')             | Printa "Olá mundo!" com texto , estilo e back diferentes.
+
+print('\033[1;1;1mOlá mundo!\033[m') | Limita á apenas essa frase
+
+
+	                      Laço/Estrutura de repetição 
+					For
+No terceiro valor pode colocar qualquer numero, assim será contado pulando esse
+ numero de casas
+
+for variavel in range(0, 10): | 'Oi' será printado 9 vezes e parará no 10
+	print('Oi')
+
+for variavel in range(10, 0,-1): | De 10 a 0 sera printado
+	print(variavel)
+
+i = int(input('I:'))
+f = int(input('F:'))
+p = int(input('P:'))
+for c in range(i,f,p):
+    print(c)
+
+s = 0
+for c in range(0,10):
+    n = int(input('Valor:'))
+    s += n
+print('Soma = {}'.format(s))
+
+	                                      While
+contador = 0                      | Enquanto o contador estiver abaixo de 5, o bloco abaixo é executado
+while contador < X : 
+  print("Palavra")
+  contador += 1
+
+conta = 0
+while conta < 10:
+    conta += 1
+    if conta == 6:
+        break			| Quando conta chegar a 6, ele para(break)
+
+conta = 0
+while conta < 10:
+    conta += 1
+    if conta == 6:
+        continue		| Quando conta chegar a 5, ele pula o 6(continue)
+
+
+			         | Variáveis compostas
+			         Podem interagir entre si
+
+				         Tuplas
+				 São imutáveis
+lanche = 'h', 's', 'p', 'u'
+	   0 1 2 3
+print(lanche[0:3])         | Será mostrado 'h,s,p' ; o 3 não
+
+for variavel in lanche:
+	print(c)	      | Printará cada valor
+			 
+		 			 Listas
+			Idem á tuplas, porém mutáveis, tem q usar []
+lanche.remove('p') | Remove 'p'
+lanche.append('o') | Adiciona 'o'
+
+				      Dicionários {} |
+			São listas com nomes personalizados
+dados = {'nome' : 'Pedro','idade' : 25}
+	       |		|
+	  Keys(k)   Values(v)
+	           |    |
+		 Items
+
+print(dados.values())
+print(dados.items())
+
+dados['sexo'='M'] | Será adicionado o dicionario sexo com valor M
+
+del dados['idade'] |  Deleta o dicionário idade
+
+
+			           Função
+	     Você cria uma função e atribui um valor
+
+def linha() :
+    print('-'*30)
+print('Parte de cima')
+lin()
+print('Parte de baixo') | Sempre que a função linha for chamada será executada
+
+			          Com parâmetros
+def titulo(txt):
+    print('-'*30)
+    print(txt)
+    print('-'*30)
+titulo('Curso em video')
+titulo('Python e bom')
+
+def soma(a,b=0) : | Passar a quantidade de parametros q terá, *núm se for varios
+    s = a + b	       | b = 0 (Parâmetro opcional)
+    print(s)
+soma(1,2)
+soma(a=1,b=0)
+
+def soma(a=0,b=0,c=0):
+    s = a + b + c 
+    return s		     | Retorna o valor de s para cada variavel
+r = soma(3,2,5)
+r2 = soma(1,7)
+r3 = soma(4)
+		
+
+			    Interactive help
+help() 		 | Exibe um manual com ajuda. Digite um módulo na execução para 
+help(modulo)	    ter informações sobre
+
+
+			    Exceção/Erro
+try: | Tente |
+    a = int(input('Numerador : '))
+    b = int(input('Denominador : '))
+    r = a / b 
+except | except=Se der erro | Exception as erro: | Mostrar o erro | 
+    print(f'Houve um problema!Ele é {erro.__class__}')
+else:
+    print(f'O resultado é {r}') | Se não der erro |
+finally:
+   print('Volte sempre!') | Será executado em ambos |
+| Se b receber 0, dará um erro,com esse comando você pode exibir uma mensagem caso dê erro

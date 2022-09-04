@@ -1,0 +1,81 @@
+                                                  JavaScript                                                 
+
+JavaScript = efeitos e linguagem de programação,usado junto com HTML e CSS
+
+DOM = "Modelo de objetos para documentos"
+
+Eventos = coisas especificas q acontecem quando vc faz uma coisa especifica                                        
+                  
+                   Eventos(colocar comando de eventos dentro da div em JS)
+               Coisas q fazemos acontecer com uma div quando interagimos com ela 
+             Há vários comandos de eventos:onclick , onmouseenter , onmouseout ,etc
+                       É possível criar varios eventos com a mesma var
+
+| <div id="palavra" onclick="clicar()"> 
+      Palavra dentro da div
+  </div> 
+  <script>
+         var a = window.document.getElementById('area')
+       function clicar() {
+           a.innerText = 'Palavra q vai aparecer qnd clicar'
+       }
+</script> | quando clicar na div nomeada palavra,a funçao chamada clicar ativa o texto 'Palavra q vai aparecer qnd clicar'
+           pode substituir algumas palavras chave para outras
+
+
+                   Para mudar o estilo da div quando ativar um evento:
+                         Dentro de function do evento q quer:
+
+| varqueescolheu.style.background = 'cor q quiser' | mudar cor do background quando fazer o evento dessa function
+
+
+                          JavaScript
+
+| var letras = [a,b,c,d] | Array (é quando atribui varios valores a uma variavel)
+
+| <script> </script> | por comandos de JS entre ele
+
+| <script>
+   window.alert(' ') </script> | aparece um alerta quando entra no site escrito a mensagem dele
+
+
+| <script>
+   window.prompt(' ') </script> | aparece um alerta pedindo uma resposta escrita
+
+
+| <script>
+   window.confirm(' ') </script> | aparece um alerta com opçao "ok" e "cancel"
+
+
+// = ignora o comando q tiver isso antes dele
+/* */ = o que estiver entre isso sera ignorado
+
+| var = | cria uma variavel com a palavra depois do =
+
+| string | palavra entre " " 
+
+| converter string para numero = so colocar Number antes do comando |
+
+
+                                 Operadores logicos
+! = negacao / o contrario
+&& = cojunçao / ambos tem q ser true para ser considerado true
+|| = disjunçao / se um dos valores for true (verdadeiro) é considerado true
+                      
+                                    Ternario 
+Realiza um teste,caso true,algo acontece e caso false,outra coisa acontece
+Ex: var x = 8
+var resultado = x % 2 == 0 ? 5: 9
+Se x % 2 for = a 0 ,sera true,entao a atribuiçao sera 5 
+
+
+                                    Condições
+     Caso algo seja verdadeiro(true),executa um comando,caso falso(false),executa outro
+         É possivel fazer condiçoes tmb com != (diferente), == (igual), < (menor), += -= 
+(maior / menor ou iguar)
+
+| if (variavel > 123){console.log('Palavra')} | se a variavel tiver valor maior q 123,ira
+aparecer 'Palavra' 
+
+| if (variavel > 123){console.log('Palavra')} else {'Nao palavra'} | caso a variavel seja
+menor q 123,aparecera 'Nao palavra'

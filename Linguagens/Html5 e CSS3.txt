@@ -1,0 +1,176 @@
+                                	Html e CSS
+Html = conteudo da paginas,semântica
+CSS = forma,estilo
+
+| <!DOCTYPE html>           | Tipo de linguagem
+
+| <html lang="pt-br">        | Língua do site
+
+| <meta charset="UTF-8"> | Permite acentuaçoes no site
+
+| <meta name="viewport" content="width=device-width, initial-scale=1.0">  | Ocupa toda a tela 
+
+| <head> </head>         	 | Parte de configuraçoes do site
+
+| <body> </body>         	 | Parte de conteudo e edtilo do site
+
+| <h1> </h1> até <h6> </h6> | Enquanto maior o h, menor a letra
+
+| <p></p>              | Parágrafo
+
+| <hr>                   | Cria uma linha horizontal
+
+| <br>                   | Quebra de linha
+
+| &reg; 	        | É possivel adicionar símbolos com & ;
+
+| &#codigo;      | Para adicionar emojis, pesquisar codigo no google
+
+| <b> </b>             | Negrito
+
+| <i> </i>               | Itálico
+
+| <u> </u>              | Sublinhado
+
+| <big> </big>        | Letra grande (Em futuras atualizações parará de funcionar)
+
+| <small> </small>   | Letra pequena
+
+| <tt> </tt>            | Fonte diferente (Em futuras atualizações parará de funcionar)
+
+| 1<sup>o</sup>      | O 'o' fica encima do 1 formando primeiro
+
+| 1<sub>o</sub>      | O 'o' fica encima do 1
+
+| <blockquote> </blockquote> | Citação 
+
+| <center> </center> | Posiciona no centro do site (Em futuras atualizações parará de funcionar)
+
+| <marquee behavior="" direction="right"> | Animação com texto rolando na direção escolhida
+ 
+| <mark style="background-color: cor;">Texto</mark>| Deixa o texto marcado
+
+| <code>Texto</code> | Texto monoespaçado
+
+| <pre> </pre> | Todo texto escrito nela fica da forma que foi escrita no código,com as quebras de linha,etc
+
+| <abbr title="Significado">Palavra difícil</abbr> | Usado para explicar uma palavra passando o mouse encima
+
+| <bdo dir="rtl">Texto</bdo> | O texto é exibido ao contrário
+
+Pode usar style dentro de tags para modificar background, color,etc
+
+
+			Imagem
+<img src="imagem.png" alt="texto alternativo" width="30%" height="100px">
+Dentro de img pode alterar o tamanho(width),largura(height),borda(border),etc
+
+<picture>
+   <source media="(max-width: 750px)" srcset="imagem.png" type="image/">
+    <source media="(max-width: 1050px )" srcset="imagem.png" type="image/">
+    <img src="imagem.png" alt="imagem flexivel">
+</picture>
+Com picture,você pode adaptar a imagem de acordo com tela do seu visitante
+
+			Favcon
+<link rel="shortcut icon" href="icone.ico" type="image/x-icon">
+Deve ser feito antes de title
+
+			Áudio
+<audio controls preload="metadata" loop> | Configurações básicas do áudio |
+    <source src="horse.ogg" type="audio/ogg">
+    <source src="horse.mp3" type="audio/mpeg"> | Sempre por vários formatos para caso um não
+    <source src="horse.wav" type="audio/wav">         funcionar o outro funcione |
+Seu navegador não suporta o áudio</audio> | Para caso nenhum consiga reproduzir
+
+| audio controls | Exibe um painel de controle do áudio
+| preload=" " | metadata(melhor), none(só baixa o áudio qndo vc clicar) e auto(baixa automático) 
+| loop | Deixa em loop o áudio
+
+			Vídeo
+<video controls height="320" width="720" poster="imagem.png"> | Configurações básicas do player |
+    <source src="video.mp4" type="audio/mp4">
+    <source src="video.m4v" type="audio/mp4">
+    <source src="video.webm" type="audio/webm"> | Sempre por vários formatos para caso um não
+    <source src="video.ogv" type="audio/ogg">		funcionar o outro funcione |
+Seu navegador não suporta video</video>  | Será exibido caso nenhum funcione |
+
+| poster="" | Arquivo de imagem que será a thumb do vídeo
+
+			Link
+<a href="https://google.com"target="_blank">Texto que envia para o link</a>
+<a href="aplicativo.exe"target="_blank">Para baixar</a>	
+
+Em todos target="" pode colocar _blank(abre em nova guia) ou self(abre na guia atual)			
+
+			Tabelas
+Em futuras atualizações parará de funcionar border,align e bgcolor
+
+<table border="1px" align="center" bgcolor="blue" lenght="200dp">
+	<tr><td><b>Estado</b></td><td><b>Sigla</b></td></tr>
+	<tr><td>Minas Gerais</td><td>MG</td></tr>
+	<tr><td>Espirito Santo</td><td>ES</td></tr>
+</table> 
+
+Border = tamanho da borda
+Align = alinhamento
+
+
+			Listas
+	É possivel misturar as listas
+
+Não ordenada,ou seja,a ordem tanto faz,como uma lista de compras
+<ul type="square"> | Type = disc,square,circle
+	<li>Alface</li>
+	<li>Tomate</li>
+</ul>
+
+Ordenada,ou seja,a ordem faz diferença,como horário de compromisso
+<ol type="1"> | Type = square,1,a,A,I,i
+	<li>Acordar</li>
+	<li>Almoçar</li>
+	<li>Dormir</li></ol>
+
+
+			Formulários
+Sempre começar com p, depois input,depois o tipo da informação,depois o nome do campo e depois se tem uma 
+expecificação. Há muitos tipos de type
+
+<form action="index.html" method="post">
+<p><input type="text" name="camponome" required size="50px"></p>
+<p><input type="text" name="campodesabilitado" disabled></p>
+<p><input type="password" name="camposenha" maxlength="5"></p>
+<p><input type="date" name="campodata"></p>
+<p><input type="email" name="campoemail" required></p>
+<p><input type="file" value="arquivo"></p>                      
+<p><input type="reset" value="Limpar"></p> 
+<p><input type="submit" value="Enviar"></p>
+</form>
+
+| required size dita o tamanho do campo
+| disabled não permite escrever
+| maxlength dita a quantidade de caracteres
+| required obriga a preencher o campo
+| em file,submit e reset não põe name e põe value
+
+
+				CSS (interno/locais e inline)
+                        Todo comando termina em ;
+
+| <body style="background-color: black; color: rebeccapurple; font-family: Arial;"> | Externo
+Uma das formas corretas de alterar background(tela) ,color(letras), font-family(formato letras),etc
+
+| <style> </style>| Melhor forma de usar CSS é entre style
+
+| <style>                                                
+       body{                                           
+            background-color: ;} </style> | cor do background.Pode ser feito com
+						color(letras), text, font-family, text-align, line-height, link, etc
+
+| <div id="palavra"> </div> | divide uma parte da tela q pode ser especificado com os comandos
+abaixo.Deve ser colocado na parte de JS e os comandos abaixo em CSS.
+
+| <style>
+      div#palavra {
+          background-color: ; 
+                        } | Também é possível modificar CSS de div´s da mesma forma q body

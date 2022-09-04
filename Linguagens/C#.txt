@@ -1,0 +1,191 @@
+Senha Unity : Jonaseduard0                C#
+Sempre usar ; no fim dos comandos
+
+                                         Dicas
+| Levar em consideraçao a mass(massa) do personagem e a gravidade quando for fazer animaçoes |
+
+| Quando estiver programando as habilidades do personagem,criar uma variavel para ela e associ
+ar á habilidade|
+
+| Sempre desmarcar 'has exit time' e dar reset na engrenagem nas animaçoes |
+
+| Criar um componente e uma variavel para checar se o personagem esta tocando o chão para ele
+nao cair|
+
+| Criar uma pasta em 'Assets' com o botao direito 'Create' e 'Folder' para cada coisa.Uma para 
+os sprites,uma para os comandos em 'create' 'c# script',etc |
+
+| Nunca usar acentos e espaços em nome de pastas no Unity e nomear preferencialmente em ingles|
+
+| Sempre usar ; no fim dos comandos |
+
+| Mudar a resoluçao do jogo em 'Aspect' |
+
+| Quando for criar um script com uma habilidade do personagem,criar um objeto filho do persona
+gem e associar |
+
+| Criar cenas para tela de Game over e menu |
+
+                                          Sprites
+| Criar uma pasta em 'Assets' com o botao direito do mouse e em 'Criate folder' para por o mapa
+de sprites do personagem e o sprite do chao. |
+
+| Importar o mapa de sprites do personagem para a pasta e escolher a qualidade em 'Compression'
+e 'Max size'.Mudar para 'Multiple'|
+
+| Em 'sprite editor',selecionar o tamanho dos sprites do personagem |
+
+
+                                         Animaçoes
+| Selecionar os sprites que desejar e arrastar para a tela e criar uma pasta na pasta de anima
+coes com o nome da açao do personagem.Separar as pastas,uma com o personagem pulando outra com
+ele andando,etc |
+
+| Mudar a velocidade de animaçao em 'animation' |
+                                      
+
+                                     Codigos importantes
+
+| if (x <= -6){Destroy(transform.gameObject);} |
+Se um objeto chegar na coordenada -6 ele sera destruido.Usado para apagar objetos q estao fora
+                                                                       do mapa e poupar memoria
+
+| void OnTriggerEnter3D(Collider2D colidir){ } | quando objetos se colidirem o comando { } sera
+executado
+
+| if (input.GetButtonDown ("Fire")){} | se o botao 'Fire' for pressionado executa o codigo{}
+
+                                    Operadores Lógicos
+| && | e , and
+
+| || | ou , or
+
+| ! | nao , not
+
+| ? | realiza um teste,caso true atribui um valor,caso false,outro
+
+| % | retorna o resto de uma divisao inteira
+
+
+                                       Variáveis
+
+| int palavra = 123; | criou uma variavel chamada 'palavra' e recebe um numero INTeiro
+
+| float palavra = 12.3f; | criou uma variavel chamada 'palavra' e recebe um numero não inteiro.
+
+| bool palavra = false; | atribui true (verdadeiro) ou false (falso) para uma variavel
+
+| string palavra = "palavra"; | criou a variavel 'palavra' e deu o valor nao numerico,e sim com 
+                                                                                  outra palavra
+| public variavel | cria uma variavel q pode ser associada a um objeto na unity
+
+| private variavel | variavel apenas no codigo
+
+Variável local | só pode ser acessado de um metodo,no q foi criado
+
+Variável global | pode ser acessado de qualquer metodo
+
+
+                                    Comandos
+
+| void Start(){} | executa oq estiver dentro no inicio do jogo,no primeiro frame
+
+| void Update(){} | executa tudo oq estiver dentro a cada frame,sem parar
+
+| print(palavra); | imprimi na tela "palavra".tem q ser MonoBehavior
+
+| void Update(){x = transform.position.x ; x += 1;} | faz o objeto se movimentar + 1 pixel para
+frente.y no lugar de x faz se movimentar para cima. - no lugar de + faz voltar 
+
+| Debug.Log(palavra) | imprimi na tela "palavra".nao pode ser MonoBehavior
+
+
+                                 Estrutura Condicional
+
+| if(x>y){Debug.Log("Maior")} else {Menor} | se x for maior q y,executa "Maior",se nao,"Menor"
+
+| if (x<y) {Debug.Log("Maior")} | se x for menor q y executa "Maior"
+
+
+                                    Ferramentas
+| Platform Effector 2D | criar isso em um objeto para ser transformado em uma plataforma
+
+| Rigidbody2D / PlayerRigidbody 2D | adiciona um corpo rigido a um objeto ou personagem.faz ele
+                                                                            ter massa,gravidade
+
+| Box Collider 2D | criar isso em um objeto faz ele ter uma caixa de colisão,ele pode colidir
+
+| Para impedir do personagem rotacionar quando colidir com um objeto,ativar 'Fixed Angle' em
+Box Collider |
+
+| Ative Is Trigger no 'Box collider' para sempre q objetos colidirem um codigo seja excutado |
+
+| 'Create Other' '3D Text' | cria um texto que aparecera na tela,como Game Over,etc
+
+
+                                   Laço for/while 
+| int x = 0
+ while(x<10){Debug.Log(x)}; | criou um int x = 0.enquanto x for menor q 10
+                          
+| for (int x=0;x<10;x=x+1) {Debug.Log(x)}; | x = 0.x vai aumentando 1 no valor ate chegar a 10
+                            
+| for (int x=0;x<10;x=x+1)                        
+  if(x==5)
+   {break;} 
+    Debug.Log(x); | 
+x = 0.x aumenta 1 ate chegar a 10.porem se x chegar a 5 o comando e parado e nao continua
+
+| continue; | se substituir break por continue o numero 5 so e pulado mas continua o codigo
+
+
+                                     Arrays/Vetores
+
+| int[] numeros = {10,20,30 }; | foram guardados os valores 10 20 30 na variavel numeros
+
+| int[] numeros = {10,20,30}
+ print(numeros[0]); | (dentro de void) o numero da posiçao 0,no caso o 10 sera printado
+
+| numeros[1]= 15; | o numero na posiçao 1, o 20 foi alterado para 15
+
+
+                                      Dictionary
+                        Usado para adicionar ou remover informaçoes 
+
+| Dictionary<string,string> vilões = new Dictionary<string,string>(); | cria um dicionario do
+tipo string chamado vilões 
+
+| vilões.Add("Vilao","vilao e um chefao" + "altura:180cm"); | adiciona informaçoes () á vilões
+
+| vilões.Remove("Vilao") | entra em informaçoes de vilões e remove a informação de Vilao
+
+
+                                  Classes e herança
+                Usado para criar classes de personagens e atribuir caracteristicas
+
+| class Vampiros 
+                int velocidade ;
+                int força;
+                void ataque() | criou-se a classe Vampiros e foi atribuido caracteristicas
+
+| class Lobisomens : Vampiros | Lobisomens foi criada com as caracteristicas da Vampiros
+
+
+                                  Imputs - GetMouse 
+| bool buttonLeft,buttonRight;
+  void Update()
+  {
+    buttonLeft = Input.GetMouseButton(0);
+   } | criou uma bool chamada buttonLeft e Right.Quando segurando o botao direito ou esquerdo
+                                                    do mouse retorna true e quando soltar,false
+
+
+                                      Botões de ação
+                              Deve ser feito dentro de VoidUpdate
+
+| Edit - Project Settings - Input Manager | configura as teclas do teclado ou mouse que executam
+                                                                               as açoes do jogo
+
+| GetButtonDown | Clicar em uma tecla ou mouse
+
+|  if (Input.GetButtonDown("Jump"))
+   {Debug.Log("Pulo");} | Se o botão de Jump for clicado,Pulo será executado
