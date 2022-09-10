@@ -26,9 +26,9 @@ CSS = forma,estilo
 
 | &#codigo;      | Para adicionar emojis, pesquisar codigo no google
 
-| <b> </b>             | Negrito
+| <b> </b>             	    | Negrito
 
-| <i> </i>               | Itálico
+| <i> </i>                 | Itálico
 
 | <u> </u>              | Sublinhado
 
@@ -57,6 +57,10 @@ CSS = forma,estilo
 | <abbr title="Significado">Palavra difícil</abbr> | Usado para explicar uma palavra passando o mouse encima
 
 | <bdo dir="rtl">Texto</bdo> | O texto é exibido ao contrário
+
+| lorem | Cria um texto em latim feito para você fazer testes com ele
+
+| <main> </main> | Conteúdo principal do site
 
 Pode usar style dentro de tags para modificar background, color,etc
 
@@ -154,23 +158,71 @@ expecificação. Há muitos tipos de type
 | em file,submit e reset não põe name e põe value
 
 
-				CSS (interno/locais e inline)
-                        Todo comando termina em ;
+			ID´s e Classe
+<style>
+   .verde{color: green;}
+   #vermelho{color: red;}
+</style>
+   <p class="verde">Classe com .</p>
+   <p id="vermelho">ID com #</p>
+É possivel criar classes ou atribuir uma e id que é uma identificação diferente do nome da tag
 
-| <body style="background-color: black; color: rebeccapurple; font-family: Arial;"> | Externo
-Uma das formas corretas de alterar background(tela) ,color(letras), font-family(formato letras),etc
 
-| <style> </style>| Melhor forma de usar CSS é entre style
+				CSS (interno, inline e externo)
+                        		Todo comando termina em ;
+Modificações possíveis : background-color, color, font-, text-, line-, link, height, width, 
+weight, etc
+
+			Externo
+Consiste em criar um arquivo .css onde fica separado do HTML:
+
+body{color: rgb(255, 255, 255); font-family: sans-serif, Helvetica, Arial}
+                                       | Três famílias para caso uma não seja compatível |
+
+h1{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+h6{font-size: 20px; color: #0000ff ;}
+
+#simbolo{color: hsl(240, 100%, 255)} | Para ID
+.mono{color: blue} | Para Class
+
+| Medidas absolutas : pt, px, pc, in, cm, mm |
+| Medidas relativas : em, ex, rem, vw, vh, % |
+
+
+			Inline
+| <body style="color: white"> | Na linha
+		     |         |		
+	Propriedade	      Valor
+
+
+			Interno
+| <style> </style>|
 
 | <style>                                                
-       body{                                           
-            background-color: ;} </style> | cor do background.Pode ser feito com
-						color(letras), text, font-family, text-align, line-height, link, etc
+       body{color: white;}</style> | 
 
-| <div id="palavra"> </div> | divide uma parte da tela q pode ser especificado com os comandos
-abaixo.Deve ser colocado na parte de JS e os comandos abaixo em CSS.
+						
+			CSS de ID
+| <div id="palavra"> </div> | Divide uma parte da tela q pode ser especificado com comandos
+Deve ser colocado na parte de JS e personalizados em CSS.
 
 | <style>
-      div#palavra {
-          background-color: ; 
-                        } | Também é possível modificar CSS de div´s da mesma forma q body
+      div#palavra {color: white} | 
+
+
+			Cores
+Pode representar cores no CSS de algumas formas
+Decimal : 0 1 2 3 4 5 6 7 8 9
+Hexadecial : 0 1 2 3 4 5 6 7 8 9 A B C D E F
+
+| ...color: hsl(240, 100%, 50%) | Hue(matiz), Saturation(saturação), Lightness(luminosidade)
+| ...color: rgb(0, 0, 255)          | Red, green, blue. Cores primárias
+| ...color: #0000ff 	       | Hexadecimal
+| ...color: blue 		       | Nome
+
+			Degradê
+background-image: linear-gradient(to right, black 33%, rgb(34, 14, 14) 33%, red);
+				               |           |                 |			|
+				      Direção     Desta cor      Para esta     Porcentagem de ocupação
+					|
+		       Pode ser em 45deg(45graus), e formas(circle)
