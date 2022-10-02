@@ -168,10 +168,39 @@ expecificação. Há muitos tipos de type
 É possivel criar classes ou atribuir uma e id que é uma identificação diferente do nome da tag
 
 
+			Box
+Elementos de bloco no HTML podem ser vistos como uma caixa contendo conteúdo, padding(preenchimento), 
+border(borda) e margin(margem)
+
+<div class="pai">
+    <div class="filho">
+    <div class="caixa">
+    <p>Teste</p>
+</div>    
+</div>
+</div>
+    <style>
+        .pai{background-color: #af47ff;padding: 30px;width: 300px;}
+        .filho{background-color: #ff4797;padding: 30px;}
+        .caixa{background-color: #f3ff47;padding: 30px;border: 2px solid #333;border-style: dotted;font-family: courier;text-align:center;font-size:2rem;}
+</style>
+dotted = pontilhado
+	
+	Flexbox
+flex-direction: define a direção da organizaçãorow, row-reverse, column, column-reverse
+justify-content: controla o alinhamento vertical
+flex-start, flex-end, center
+align-items: controla o alinhamento horizontal
+flex-start, flex-end, center
+flex-wrap: por padrão, os itens ficam na mesma linha
+necessário caso o objetivo seja que o flex ocupe mais de uma linha
+wrap, wrap-reverse
+display: flex;
+
 				CSS (interno, inline e externo)
                         		Todo comando termina em ;
 Modificações possíveis : background-color, color, font-, text-, line-, link, height, width, 
-weight, etc
+weight, border-, margin-, padding-, dotted, display:flex, etc
 
 			Externo
 Consiste em criar um arquivo .css onde fica separado do HTML:
