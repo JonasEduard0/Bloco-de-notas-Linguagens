@@ -126,16 +126,16 @@ variavel.sort			                | Organiza em decrescente os valores da variavel
 
 				  Cores no terminal
 
-\033[1;1;1m | No lugar de 1 pode colocar o número q quiser referente a cor desejada.
-          |  |  | Cor do background
-          |  | Cor do texto
-          |  estilo
-                                                      Em style
+\033[0;30;40m | No lugar de 1 pode colocar o número q quiser referente a cor desejada.
+         | estilo   
+         |  |  cor do texto
+         |  |   | background                                
+
     Existe outros alem desses mas esses são mais usados
 0 = Nada
 1 = Negrito
 4 = Sublinhado
-7 = Inverte o texte com o background
+7 = Inverte o text com o background
 
 			                Em text
 30 á 37 = Respectivamente : branco,vermelho,verde,amarelo,azul,roxo,ciano,cinza
@@ -271,3 +271,14 @@ else:
 finally:
    print('Volte sempre!') | Será executado em ambos |
 | Se b receber 0, dará um erro,com esse comando você pode exibir uma mensagem caso dê erro
+
+
+
+
+
+
+from pygame import mixer 
+mixer.init() 
+mixer.music.load("Documents\Jogo\musica.mp3") 
+mixer.music.set_volume(0.7) 
+mixer.music.play()
