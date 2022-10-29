@@ -1,0 +1,235 @@
+                                	Html
+Html = conteudo da paginas,semântica
+
+| <!DOCTYPE html>           | Tipo de linguagem
+
+| <html lang="pt-br">        | Língua do site
+
+| <meta charset="UTF-8"> | Permite acentuaçoes no site
+
+| <meta name="viewport" content="width=device-width, initial-scale=1.0">  | Ocupa toda a tela 
+
+| <head> </head>         	 | Parte de configuraçoes do site
+
+| <body> </body>         	 | Parte de conteudo e edtilo do site
+
+| <h1> </h1> até <h6> </h6> | Enquanto maior o h, menor a letra
+
+| <p></p>              | Parágrafo
+
+| <hr>                   | Cria uma linha horizontal
+
+| <br>                   | Quebra de linha
+
+| &reg; 	        | É possivel adicionar símbolos com & ;
+
+| &#codigo;      | Para adicionar emojis, pesquisar codigo no google
+
+| <b> </b>             	    | Negrito
+
+| <i> </i>                 | Itálico
+
+| <u> </u>              | Sublinhado
+
+| <big> </big>        | Letra grande (Em futuras atualizações parará de funcionar)
+
+| <small> </small>   | Letra pequena
+
+| <tt> </tt>            | Fonte diferente (Em futuras atualizações parará de funcionar)
+
+| 1<sup>o</sup>      | O 'o' fica encima do 1 formando primeiro
+
+| 1<sub>o</sub>      | O 'o' fica encima do 1
+
+| <blockquote> </blockquote> | Citação 
+
+| <center> </center> | Posiciona no centro do site (Em futuras atualizações parará de funcionar)
+
+| <marquee behavior="" direction="right"> | Animação com texto rolando na direção escolhida
+ 
+| <mark style="background-color: cor;">Texto</mark>| Deixa o texto marcado
+
+| <code>Texto</code> | Texto monoespaçado
+
+| <pre> </pre> | Todo texto escrito nela fica da forma que foi escrita no código,com as quebras de linha,etc
+
+| <abbr title="Significado">Palavra difícil</abbr> | Usado para explicar uma palavra passando o mouse encima
+
+| <bdo dir="rtl">Texto</bdo> | O texto é exibido ao contrário
+
+| lorem | Cria um texto em latim feito para você fazer testes com ele
+
+| </main> | Conteúdo principal do site
+
+|  </span> | Seleciona um trecho de uma grande frase
+
+Pode usar style dentro de tags para modificar background, color,etc
+
+
+			Imagem
+<img src="imagem.png" alt="texto alternativo" width="30%" height="100px">
+Dentro de img pode alterar o tamanho(width),largura(height),borda(border),etc
+
+<picture>
+   <source media="(max-width: 750px)" srcset="imagem.png" type="image/">
+    <source media="(max-width: 1050px )" srcset="imagem.png" type="image/">
+    <img src="imagem.png" alt="imagem flexivel">
+</picture>
+Com picture,você pode adaptar a imagem de acordo com tela do seu visitante
+
+background-image: url(fullmetal.png)
+Imagem de fundo de uma caixa
+			Favcon
+<link rel="shortcut icon" href="icone.ico" type="image/x-icon">
+Deve ser feito antes de title
+
+			Áudio
+<audio controls preload="metadata" loop> | Configurações básicas do áudio |
+    <source src="horse.ogg" type="audio/ogg">
+    <source src="horse.mp3" type="audio/mpeg"> | Sempre por vários formatos para caso um não
+    <source src="horse.wav" type="audio/wav">         funcionar o outro funcione |
+Seu navegador não suporta o áudio</audio> | Para caso nenhum consiga reproduzir
+
+| audio controls | Exibe um painel de controle do áudio
+| preload=" " | metadata(melhor), none(só baixa o áudio qndo vc clicar) e auto(baixa automático) 
+| loop | Deixa em loop o áudio
+
+			Vídeo
+<video controls height="320" width="720" poster="imagem.png"> | Configurações básicas do player |
+    <source src="video.mp4" type="audio/mp4">
+    <source src="video.m4v" type="audio/mp4">
+    <source src="video.webm" type="audio/webm"> | Sempre por vários formatos para caso um não
+    <source src="video.ogv" type="audio/ogg">		funcionar o outro funcione |
+Seu navegador não suporta video</video>  | Será exibido caso nenhum funcione |
+
+| poster="" | Arquivo de imagem que será a thumb do vídeo
+
+
+			Link
+<a href="https://google.com"target="_blank">Texto que envia para o link</a>
+<a href="aplicativo.exe"target="_blank">Para baixar</a>	
+
+Em todos target="" pode colocar _blank(abre em nova guia) ou self(abre na guia atual)			
+
+
+			Tabelas
+<table>
+    <tr>  <!--table row(linha da tabela)-->
+       <td class="col" rowspan="2">País</td>  <!--table data(dado da tabla)-->
+       <td class="col">Estado</td>
+       <td class="col">Cidade</td>
+</tr>
+     <tr>
+         <td colspan="2">MG</td>
+</tr>
+     <tr>
+         <td>EUA</td>
+         <td>Texas</td>
+         <td>New York</td>
+</tr></table>
+   <style>
+        table{width: 400px;height: 100px;}
+        td{border: 1px solid blue;text-align: center;background-color: red;}
+        .col{position: sticky;top: 0;background-color: blue;}
+</style>
+
+
+			Listas
+	É possivel misturar as listas
+
+Não ordenada,ou seja,a ordem tanto faz,como uma lista de compras
+<ul type="square"> | Type = disc,square,circle
+	<li>Alface</li>
+	<li>Tomate</li>
+</ul>
+
+Ordenada,ou seja,a ordem faz diferença,como horário de compromisso
+<ol type="1"> | Type = square,1,a,A,I,i
+	<li>Acordar</li>
+	<li>Almoçar</li>
+	<li>Dormir</li></ol>
+
+
+			Formulários
+Sempre começar com p, depois input,depois o tipo da informação,depois o nome do campo e depois se tem uma 
+expecificação. Há muitos tipos de type
+
+<form action="index.html" method="post">
+<p><input type="text" name="camponome" required size="50px"></p>
+<p><input type="text" name="campodesabilitado" disabled></p>
+<p><input type="password" name="camposenha" maxlength="5"></p>
+<p><input type="date" name="campodata"></p>
+<p><input type="email" name="campoemail" required></p>
+<p><input type="file" value="arquivo"></p>                      
+<p><input type="reset" value="Limpar"></p> 
+<p><input type="submit" value="Enviar"></p>
+</form>
+
+| required size dita o tamanho do campo
+| disabled não permite escrever
+| maxlength dita a quantidade de caracteres
+| required obriga a preencher o campo
+| em file,submit e reset não põe name e põe value
+
+
+			ID´s
+<style> #vermelho { color: red; } </style>
+<p id="vermelho"> ID com # </p>
+
+			Class
+<style> .verde {color: green;} </style>
+<p class="verde vermelho"> Classe com .Pode mais de um </p>
+
+É possivel criar classes ou atribuir uma e id que é uma identificação diferente do nome da tag
+Apenas um id com mesmo nome, e vários class com mesmo nome
+
+			Pseudo-classe e pseudo-elementos
+| <style> p: {hover} </style>
+<p> Pseudo classes com : </p> |
+
+| <style> p:: {hover} </style>
+<p> Pseudo elementos com :: </p> |
+
+
+			Box
+	Box-level
+Ocupa toda a tela a direita e não permite conteúdo na mesma linha
+
+	Inline-level
+Ocupa a área necessária e permite mais conteúdo na mesma linha
+
+Elementos de bloco no HTML podem ser vistos como uma caixa contendo conteúdo, padding, 
+border e margin
+
+<div class="pai">
+    <div class="filho">
+    <div class="caixa">
+    <p>Teste</p></div></div></div>
+<style>
+     .pai{background-color: #af47ff;padding: 30px;width: 300px;}
+     .filho{background-color: #ff4797;padding: 30px;}
+     .caixa{background-color: #f3ff47;padding: 30px;border: 2px solid #333;border-style: dotted;font-family: courier;text-align:center;font-size:2rem;}
+</style>
+
+	
+		Flexbox
+flex-direction: define a direção da organização 
+align-items: controla o alinhamento horizontal
+center
+flex-wrap: por padrão, os itens ficam na mesma linha
+necessário caso o objetivo seja que o flex ocupe mais de uma linha
+
+	
+		Tagas de agrupamento / Semânticas
+Tags q possuem apenas valor semântico, ajuda na organização do código do programador.
+
+| </header> | Cabeçalho
+| </main> | Código principal
+| </footer> | Rodapé
+| </nav> | Linka para outra página
+| </section id="assunto"> | Seção do conteúdo. Sobre oq está falando
+| </article> | Artigo da seção. 
+| </aside> | Parte do artigo q pode não ter muito a ver com a seção
+
+
+		
